@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#27104E"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To-Do List"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linearNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:paddingHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/edit_text_background" />
+
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#F9C46B"
+            android:fontFamily="sans-serif-black"
+            android:padding="0dp"
+            android:text="➕"
+            android:layout_marginTop="-2dp"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearNew"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+</RelativeLayout>
